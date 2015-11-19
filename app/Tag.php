@@ -7,5 +7,10 @@ class Tag extends Model
 
      protected $table = "tags";
      protected $fillable = ['name'];
+     
+     public function articles()
+     {
+          return belongsToMany('App\Article')->withTimestamps();
+     }
 
 }
